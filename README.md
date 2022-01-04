@@ -6,9 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Deploy with firebase
 
 If your project has not been initialize with firebase then run the following command:
-`firebase init` select config and use repos `build` then do not change the file like index keep yours.
+`npm run build` then `firebase init` select config and use repos `build` then do not change the file like index keep yours. Then do the next step.
 
-Otherwise:
+Deploy project (when firebase already initialized):
 `npm run deploy` ... It's alive !
 
 ## Available Scripts
@@ -32,3 +32,7 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run deploy`
+
+Builds and then run `firebase deploy`.
