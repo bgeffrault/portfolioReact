@@ -5,10 +5,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Deploy with firebase
 
-Run the script `npm run build` then if the projects has not been set already:
+If your project has not been initialize with firebase then run the following command:
 `firebase init` select config and use repos `build` then do not change the file like index keep yours.
 
-Once the project is set `firebase deploy` ... It's alive !
+Otherwise:
+`npm run deploy` ... It's alive !
 
 ## Available Scripts
 
