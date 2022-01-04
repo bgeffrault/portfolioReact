@@ -4,7 +4,7 @@ import Feet from "./Images/Feet.jpg";
 import ServicePublic from "./Images/ServicePublic.jpg";
 import MedicalStaff from "./Images/MedicalStaff.jpg";
 import Manufacturing from "./Images/Manufacturing.jpg";
-import { FC } from "react";
+import { SiteReference } from "../Components";
 
 export type Project = {
     title: string;
@@ -14,19 +14,12 @@ export type Project = {
     author?: JSX.Element | string;
 };
 
-type ISiteReference = {
-    url: string,
-    name: string,
-}
-
-const SiteReference: FC<ISiteReference> = ({ name, url }) => (<a href={url} target="_blank" rel="noopener noreferrer">{name}</a>)
-
 export const projects: Project[] = [
     {
         title: "Liggo",
         description: (<>
             <div>
-                <SiteReference url="https://liggo.com/en" name="Liggo" /> works within the Industrial IoT (<b>IIoT</b>) and offers a platform to optimize the
+                <SiteReference url="https://liggo.com/en" content="Liggo" /> works within the Industrial IoT (<b>IIoT</b>) and offers a platform to optimize the
                 manufacturing productions process (monitoring, measurements, quality control,
                 …). The solution optimizes the interactions between users and machines and aim
                 to improve existing processes while promoting best practices.
@@ -49,7 +42,7 @@ export const projects: Project[] = [
         title: "Sommeil profond",
         description: (<>
             <div>
-                <SiteReference url="https://sommeilprofond.fr/" name="Sommeil Profond" /> is a blog to help people who wants to recover their energy better sleep.
+                <SiteReference url="https://sommeilprofond.fr/" content="Sommeil Profond" /> is a blog to help people who wants to recover their energy better sleep.
                 It is develop with <b>SEO</b> (Search engine optimization).
             </div>
             <ul>
@@ -67,7 +60,7 @@ export const projects: Project[] = [
         title: "ShoeTimes",
         description: (<>
             <div>
-                <SiteReference url="https://www.fontys.nl/nieuws/nl/32-studentgroepen-van-fontys-hogescholen-presenteren-hun-uitdagende-projecten-tijdens-het-engineering-in-practice-symposium/" name="ShoeTimes" /> is a firm's project given to a student group at Fontys. The main goal was to measure the sheerforce and deliver readable data for chiropodist.
+                <SiteReference url="https://www.fontys.nl/nieuws/nl/32-studentgroepen-van-fontys-hogescholen-presenteren-hun-uitdagende-projecten-tijdens-het-engineering-in-practice-symposium/" content="ShoeTimes" /> is a firm's project given to a student group at Fontys. The main goal was to measure the sheerforce and deliver readable data for chiropodist.
                 <br />
                 <br />
                 While it has never been created before, we (a team of multidisciplinary students) were able to deliver a <b>POC</b> and received a the first student prize for that.
@@ -92,7 +85,7 @@ export const projects: Project[] = [
         title: "Service Public",
         description: (<>
             <div>
-                <SiteReference url="https://www.service-public.fr/" name="Service Public" /> is the French reference to inform and guide people to essential services and information.
+                <SiteReference url="https://www.service-public.fr/" content="Service Public" /> is the French reference to inform and guide people to essential services and information.
                 It has a big Information System, it is managed by several teams in order to be maintain and deliver new features.
             </div>
             <ul>
@@ -113,7 +106,7 @@ export const projects: Project[] = [
         title: "CertDC",
         description: (<>
             <div>
-                <SiteReference url="http://www.certdc.inserm.fr/accueil_public.php" name="CertDC" /> is the French app used by medical staff to fill-in new death.
+                <SiteReference url="http://www.certdc.inserm.fr/accueil_public.php" content="CertDC" /> is the French app used by medical staff to fill-in new death.
                 <br />
                 <br />
                 It's a very old app and thus hard to maintain, but nevertheless it's a critical app inside a big <b>Information System</b>
@@ -138,7 +131,7 @@ export const projects: Project[] = [
         title: "Mission Moustagbal",
         description: (<>
             <div>
-                <SiteReference url="https://www.missionmoustagbal.com/" name="Mission Moustagbal" /> is blog about a French Engineer going to discover and relate the life in Chad.
+                <SiteReference url="https://www.missionmoustagbal.com/" content="Mission Moustagbal" /> is blog about a French Engineer going to discover and relate the life in Chad.
                 <br />
                 <br />
                 I advised him on which tech to use and I set up the project in order to make it works.

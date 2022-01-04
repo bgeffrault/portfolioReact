@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Section } from "..";
+import { Section, SiteReference } from "..";
 import "./Footer.scss";
 import Baptiste from "../../Resources/Images/Baptiste.png";
 import Github from "../../Resources/Images/Github.png";
@@ -20,8 +20,8 @@ export const Footer: FC<IFooter> = ({ onVisible }) => {
               Email : bgeffrault@outlook.fr
             </span>
             <div className="redirectContainer">
-              <img src={LinkeIn} alt="LinkeIn" className="redirectIcon" />
-              <img src={Github} alt="Github" className="redirectIcon" />
+              <SiteReference url="https://www.linkedin.com/in/bgeffrault" content={<img src={LinkeIn} alt="LinkeIn" className="redirectIcon" />} />
+              <SiteReference url="https://github.com/bgeffrault" content={<img src={Github} alt="Github" className="redirectIcon" />} />
             </div>
           </div>
         </div>

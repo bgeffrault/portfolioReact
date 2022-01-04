@@ -44,8 +44,8 @@ export const Drawer: FC<IDrawer> = ({ project, skill, onClose }) => {
               <div>
                 <h4>{skill ? "Projects:" : "Technologies:"}</h4>
                 <div className="technologies">
-                  {project?.technologies.map(tech => <span key={tech}>#{tech}</span>)}
-                  {skill?.projects.map((project, i, list) => <span key={project}>{project}{i < list.length - 1 && ","}</span>)}
+                  {project?.technologies.map(tech => <span className="tag" key={tech}>{tech}</span>)}
+                  {skill?.projects.map((project) => <span className="tag" key={project}>{project}</span>)}
                 </div>
               </div>
               <div>

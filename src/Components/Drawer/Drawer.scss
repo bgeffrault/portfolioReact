@@ -43,7 +43,7 @@
 }
 
 .slideIn {
-  animation: slidIn 225ms linear;
+  animation: slidIn 225ms linear forwards;
 }
 
 .slideOut {
@@ -60,11 +60,15 @@
 }
 
 @keyframes slidOut {
-  from {
+  0% {
     transform: translateX(0%);
   }
-  to {
+  99% {
     transform: translateX(100%);
+  }
+  100% {
+    width: 0px;
+    padding: 0;
   }
 }
 
@@ -113,12 +117,18 @@ li {
   text-align: justify;
   a {
     margin: 0;
+    color: #000000;
+
+    &:hover {
+      color: $primary;
+    }
   }
 }
 
 .technologies {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .legend {
@@ -127,4 +137,11 @@ li {
   a {
     font-size: 0.75rem;
   }
+}
+
+.tag {
+  background: linear-gradient(94.83deg, #46658a 0%, #213042 100%);
+  border-radius: 50px;
+  border: solid 1px $secondary;
+  padding: 0.5rem 0.75rem;
 }

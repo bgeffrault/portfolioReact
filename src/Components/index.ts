@@ -8,6 +8,7 @@ import Skills from "./Skills/Skills";
 import Section from "./Section/Section";
 import Footer from "./Footer/Footer";
 import Services from "./Services/Services";
+import SiteReference from "./SiteReference/SiteReference";
 
 export {
   ApplicationBar,
@@ -20,4 +21,5 @@ export {
   Section,
   Footer,
   Services,
+  SiteReference,
 };
