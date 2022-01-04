@@ -27,7 +27,8 @@ export const projects: Project[] = [
                 to improve existing processes while promoting best practices.
                 <br />
                 <br />
-                The platform architecture is <b>microservice</b> based. It's combined with Azure <b>Kubernetes</b> for the deployment part and uses <b>Event Hub (Kafka)</b> for data ingestion between services.
+                The platform architecture is <b>microservice</b> based. It's combined with Azure <b>Kubernetes</b> for the deployment part
+                and uses <b>Event Hub (Kafka)</b> for data ingestion between services and <b>REST Api</b> to communicate with the frontend app.
             </div>
             <ul>
                 <li>
@@ -38,7 +39,7 @@ export const projects: Project[] = [
                 <li>Train teammates to start with <b>React</b></li>
             </ul>
         </>),
-        technologies: ["React", "Material UI", "ASP .Net Core", "C#", "Postgresql", "Power BI", "DevOps", "Figma", "Git workflow", "Scrum", "Agile"],
+        technologies: ["React", "Material UI", "ASP .Net Core", "C#", "REST Api", "Kubernetes", "Kafka", "Postgresql", "Power BI", "DevOps", "Figma", "Git workflow", "Scrum", "Agile"],
         imgSrc: Manufacturing,
         author: (<>Photo by <a href="https://unsplash.com/@ig_joshabeech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Beech</a> on <a href="https://unsplash.com/s/photos/manufacturing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </>),
@@ -81,7 +82,7 @@ export const projects: Project[] = [
                 <li>Project Advisor</li>
             </ul>
         </>),
-        technologies: ["Angular", "Sass", "Github"],
+        technologies: ["Angular", "Sass", "Github", "SEO"],
         imgSrc: Sleeping,
         author: (<>Photo by <a href="https://unsplash.com/@jakeacharles?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jake Charles</a> on <a href="https://unsplash.com/s/photos/sleep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </>),
@@ -172,7 +173,7 @@ export const projects: Project[] = [
                 <li>Tech advisor</li>
             </ul>
         </>),
-        technologies: ["Wordpress", "Php", "Infra"],
+        technologies: ["Wordpress", "CSS", "Php", "Infra"],
         imgSrc: Africa,
         author: (<>Photo by <a href="https://unsplash.com/@dmitrii_zhodzishskii?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Dmitrii Zhodzishskii</a> on <a href="https://unsplash.com/s/photos/africa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </>),
