@@ -16,7 +16,7 @@ export const Projects: FC<IProjects> = ({
   onVisible,
 }) => {
   return (
-    <Section title="Main Projects" onVisible={onVisible} id={SectionName.Projects}>
+    <Section title="Main Projects" onVisible={onVisible} id={SectionName.Projects} threshold={0.2}>
       <div className="projects">
         {projects.map((project) => (
           <div className="container" key={project.title}>
