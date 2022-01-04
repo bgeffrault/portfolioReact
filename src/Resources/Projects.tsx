@@ -25,6 +25,9 @@ export const projects: Project[] = [
                 manufacturing productions process (monitoring, measurements, quality control,
                 …). The solution optimizes the interactions between users and machines and aim
                 to improve existing processes while promoting best practices.
+                <br />
+                <br />
+                The platform architecture is <b>microservice</b> based. It's combined with Azure <b>Kubernetes</b> for the deployment part and uses <b>Event Hub (Kafka)</b> for data ingestion between services.
             </div>
             <ul>
                 <li>
@@ -35,7 +38,7 @@ export const projects: Project[] = [
                 <li>Train teammates to start with <b>React</b></li>
             </ul>
         </>),
-        technologies: ["React", "Material UI", "ASP .Net Core", "C#", "Postgresql", "Power BI", "DevOps", "Figma", "Git workflow"],
+        technologies: ["React", "Material UI", "ASP .Net Core", "C#", "Postgresql", "Power BI", "DevOps", "Figma", "Git workflow", "Scrum", "Agile"],
         imgSrc: Manufacturing,
         author: (<>Photo by <a href="https://unsplash.com/@ig_joshabeech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Beech</a> on <a href="https://unsplash.com/s/photos/manufacturing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </>),
