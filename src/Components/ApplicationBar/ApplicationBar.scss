@@ -1,0 +1,223 @@
+@import "../../variables.scss";
+
+$burger_width: 30px;
+$burger_stick_height: 5px;
+
+@media only screen and (max-width: 960px) {
+  .burger {
+    display: flex;
+  }
+
+  .ApplicationBarActions {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .burger {
+    display: none;
+  }
+
+  .ApplicationBarActions {
+    display: flex;
+  }
+}
+
+.ApplicationBarContainer {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  transition: background-color 0.3s;
+}
+
+.activeBackground {
+  background-color: $secondary-dark;
+}
+
+.ApplicationBar {
+  height: $appBar-height;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding-left: $app-border-padding;
+  padding-right: $app-border-padding;
+}
+
+.ApplicationBarActions {
+  align-items: center;
+}
+
+a {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.25rem;
+  border: none;
+  text-decoration: none;
+  transition: color 0.2s;
+  &:hover {
+    color: $secondary-light;
+  }
+}
+
+.logo {
+  color: $primary;
+  flex-grow: 1;
+  height: 100%;
+  display: contents;
+
+  > a {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.burger {
+  width: $burger_width;
+  height: $burger_stick_height;
+  border-radius: $border-radius;
+  background-color: $secondary;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: $burger_width;
+    height: $burger_stick_height;
+    border-radius: $border-radius;
+    background-color: $secondary;
+    transform: translateY(-9px);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: $burger_width;
+    height: $burger_stick_height;
+    border-radius: $border-radius;
+    background-color: $secondary;
+    transform: translateY(9px);
+  }
+}
+
+.burgerButton {
+  height: 100%;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+@keyframes slidIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slidOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.menu {
+  position: absolute;
+  right: 0;
+  width: 30%;
+  height: calc(100% - 3rem);
+  background: $secondary;
+  z-index: 100;
+  overflow: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  > a {
+    display: block;
+    margin: 1rem 0;
+
+    &:hover {
+      color: $secondary-dark;
+    }
+  }
+}
+
+.activeBurgerMenu {
+  color: $primary;
+}
+
+.hoverBlack {
+  &:hover {
+    color: black !important;
+  }
+}
+
+@keyframes menuAppear70 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@keyframes menuAppear50 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes menuAppear30 {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 30%;
+  }
+}
+
+.menuClickAway {
+  width: 100%;
+  height: calc(100% - 3rem);
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 99;
+  left: 0;
+  position: absolute;
+  animation: menuAppear70 0.3s ease forwards;
+}
+
+@media only screen and (max-width: 960px) {
+  .menu {
+    width: 50%;
+  }
+  .menuClickAway {
+    animation: menuAppear50 0.3s ease forwards;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .menu {
+    width: 70%;
+  }
+  .menuClickAway {
+    animation: menuAppear30 0.3s ease forwards;
+  }
+}

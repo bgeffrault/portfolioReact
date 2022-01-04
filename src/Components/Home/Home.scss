@@ -1,0 +1,250 @@
+@import "../../variables.scss";
+
+$shootingStar-time: 4s;
+$shootingStarFast-time: 3s;
+
+.titleContainer {
+  > h1 {
+    letter-spacing: 0.1em;
+  }
+}
+
+.tags {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  font-weight: bold;
+}
+
+@keyframes AppearFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.tagsContainer {
+  display: block;
+  > div {
+    overflow: hidden;
+  }
+
+  > div:nth-child(1) {
+    > span {
+      transform: translateY(100%);
+      animation: AppearFromBottom 0.5s ease 1s forwards;
+    }
+  }
+  > div:nth-child(2) {
+    > span {
+      transform: translateY(100%);
+      animation: AppearFromBottom 0.5s ease 2s forwards;
+    }
+  }
+}
+
+.home {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.shootingStars {
+  > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.6),
+      0 0 0 8px rgba(255, 255, 255, 0.3), 0 0 0 16px rgba(255, 255, 255, 0.1);
+    animation: runningStart 3s linear infinite;
+    opacity: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 300px;
+      height: 1px;
+      background: linear-gradient(270deg, #fff, transparent);
+      transform: translate(-100%, -50%);
+    }
+  }
+  > span:nth-child(1) {
+    top: 30%;
+    left: 40%;
+    animation: runningStart $shootingStar-time linear 5s infinite;
+  }
+  > span:nth-child(2) {
+    top: 40%;
+    left: 80%;
+    animation: runningStart $shootingStarFast-time linear 2s infinite;
+  }
+  > span:nth-child(3) {
+    top: 50%;
+    left: 60%;
+    animation: runningStart $shootingStar-time linear 4s infinite;
+  }
+  > span:nth-child(4) {
+    top: 60%;
+    left: 30%;
+    animation: runningStart $shootingStar-time linear 3s infinite;
+  }
+}
+
+@keyframes runningStart {
+  0% {
+    transform: rotate(45deg) translateX(-400px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(45deg) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(45deg) translateX(400px);
+    opacity: 0;
+  }
+}
+
+.cta {
+  display: inline-block;
+  text-decoration: none;
+  color: $secondary;
+  font-size: 1.3rem;
+  position: relative;
+  text-indent: 2.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+  overflow: visible;
+
+  &::before {
+    width: 1.2em;
+    height: 2.8em;
+    border: 2px solid $primary;
+    left: 0;
+    top: -0.6em;
+    border-radius: 5em;
+    content: "";
+    position: absolute;
+  }
+
+  &::after {
+    width: 0.5em;
+    height: 0.5em;
+    background: $primary;
+    border-radius: 100%;
+    left: 0.45em;
+    top: -0.25em;
+    animation: cursorMove 3s ease-in-out infinite;
+    content: "";
+    position: absolute;
+  }
+}
+
+@keyframes cursorMove {
+  0% {
+    top: -0.25em;
+  }
+
+  50% {
+    top: 1.5em;
+    opacity: 1;
+  }
+
+  100% {
+    top: -0.25em;
+    opacity: 0.5;
+  }
+}
+
+.ctaContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding-bottom: 3rem;
+}
+
+.ctaContact {
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(315deg, #44576f 0%, #6792c7 100%);
+  background-size: 400% 400%;
+  border-radius: $border-radius;
+  background-position: 0% 50%;
+  transition: background-position 0.5s;
+  &:hover {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes TranslateBackGround {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.buttonOverlay {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 150px;
+  top: 0;
+  left: 0;
+  transform: translate(-33%, -33%) rotate(0deg);
+  border-radius: $border-radius;
+  background: linear-gradient(315deg, #44576f 0%, #6792c7 100%);
+  background-size: 400% 400%;
+  transition: background-position 0.5s;
+  &:hover {
+    background-position: 100% 50%;
+  }
+}
+
+.splitContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 $app-border-padding;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 600px) {
+  .splitContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 $app-border-padding;
+    box-sizing: border-box;
+    gap: 1rem;
+  }
+
+  .ctaContactSection {
+    display: flex;
+    justify-self: flex-start;
+    width: 100%;
+  }
+}

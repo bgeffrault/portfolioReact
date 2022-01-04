@@ -1,0 +1,31 @@
+@import "../..//variables.scss";
+
+#positionIndicators {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: $app-border-padding;
+  height: 200px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.bubble {
+  width: 1rem;
+  height: 1rem;
+  background-color: $secondary-dark;
+  border-radius: 50%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: background-color 1s;
+}
+
+.activeState {
+  background-color: $primary;
+}

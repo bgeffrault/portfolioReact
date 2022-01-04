@@ -1,0 +1,52 @@
+.Footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .Footer {
+    grid-template-columns: auto;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 8px;
+  line-height: 1.7;
+  text-align: justify;
+}
+
+.baptisteImg {
+  align-self: center;
+  > div:nth-child(1) {
+    margin: auto;
+    width: 50%;
+    > img {
+      padding: inherit;
+    }
+  }
+}
+
+.redirectContainer {
+  gap: 0.2rem;
+}
+
+.redirectIcon {
+  width: 2.5rem;
+  padding: inherit;
+  margin: 2rem;
+  margin-left: 0rem;
+  cursor: pointer;
+}
+
+.legend {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.email {
+  font-size: 1.5rem;
+}

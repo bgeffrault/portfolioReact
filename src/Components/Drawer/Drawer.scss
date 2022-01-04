@@ -1,0 +1,130 @@
+@import "../../variables.scss";
+
+.clickAway {
+  width: 50%;
+  height: 100%;
+}
+
+.drawerContainer {
+  position: absolute;
+  inset: 0;
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  z-index: 11;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawer {
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(179.97deg, #6792c7 0.02%, #040609 56.68%);
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 960px) {
+  .drawer {
+    width: 70%;
+  }
+  .clickAway {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .drawer {
+    width: 100%;
+  }
+  .clickAway {
+    width: 0%;
+  }
+}
+
+.slideIn {
+  animation: slidIn 225ms linear;
+}
+
+.slideOut {
+  animation: slidOut 225ms linear forwards;
+}
+
+@keyframes slidIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slidOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.drawerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 2rem;
+  border-bottom: solid 2px $secondary;
+}
+
+.drawerContent {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.imgContainer {
+  padding-bottom: 2rem;
+  height: 100%;
+
+  > img {
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+  padding-top: 1rem;
+  flex-grow: 1;
+}
+
+li {
+  padding: 0.5rem 0;
+}
+
+.description {
+  line-height: 1.7;
+  text-align: justify;
+  a {
+    margin: 0;
+  }
+}
+
+.technologies {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.legend {
+  font-size: 0.75rem;
+  text-align: center;
+  a {
+    font-size: 0.75rem;
+  }
+}

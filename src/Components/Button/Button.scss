@@ -1,0 +1,18 @@
+@import "../../variables.scss";
+
+.button {
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(315deg, #44576f 0%, #6792c7 100%);
+  background-size: 400% 400%;
+  border-radius: $border-radius;
+  background-position: 0% 50%;
+  transition: background-position 0.5s;
+  margin: 0;
+  &:hover {
+    background-position: 100% 50%;
+  }
+}
