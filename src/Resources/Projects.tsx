@@ -4,6 +4,8 @@ import Feet from "./Images/Feet.jpg";
 import ServicePublic from "./Images/ServicePublic.jpg";
 import MedicalStaff from "./Images/MedicalStaff.jpg";
 import Manufacturing from "./Images/Manufacturing.jpg";
+import Portfolio from "./Images/Portfolio.jpg";
+
 import { SiteReference } from "../Components";
 
 export type Project = {
@@ -36,6 +38,31 @@ export const projects: Project[] = [
         technologies: ["React", "Material UI", "ASP .Net Core", "C#", "Postgresql", "Power BI", "DevOps", "Figma", "Git workflow"],
         imgSrc: Manufacturing,
         author: (<>Photo by <a href="https://unsplash.com/@ig_joshabeech?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Josh Beech</a> on <a href="https://unsplash.com/s/photos/manufacturing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+        </>),
+    },
+    {
+        title: "Portfolio",
+        description: (<>
+            <div>
+                Since I can not share my professional React code with you, I decided to rebuild my portfolio with <b>React</b> and <b>Typescript</b> and share it with you,
+                the source code is available on my <SiteReference url="https://github.com/bgeffrault/portfolioReact" content="github" />.
+                <br />
+                <br />
+                For my portfolio I wanted to be creative, so I created the design first in <SiteReference url="https://www.figma.com/file/DjOlGmD27YlBTO7HX6ZtZe/Portfolio?node-id=208%3A33" content="Figma" /> before implemented it.
+                <br />
+                <br />
+                The time spend on it:
+                <ul>
+                    <li>A few days for the design and being satisfying enough</li>
+                    <li>1 day for the layout and responsiveness</li>
+                    <li>2-3 days for the animations (several tests and the final solution)</li>
+                    <li>1 day for the text content</li>
+                </ul>
+            </div>
+        </>),
+        technologies: ["React", "Sass", "Typescript", "Firebase", "Github", "Figma"],
+        imgSrc: Portfolio,
+        author: (<>Photo by <a href="https://unsplash.com/@goshua13?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Joshua Aragon</a> on <a href="https://unsplash.com/s/photos/portfolio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </>),
     },
     {
