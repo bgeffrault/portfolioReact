@@ -34,6 +34,9 @@ export const projects: Project[] = [
                 The frontend code is made with <b>React</b> and has an <b>Atomic</b> architecture that works very well with <b>storybook</b>.
                 <br />
                 The backend code is made with <b>ASP .NET Core (C#)</b> and has a <b>Domain Driven Design</b> (DDD) architecture.
+                <br />
+                <br />
+                I spend 2 years with an amazing team building things project.
             </div>
             <ul>
                 <li>
@@ -80,14 +83,18 @@ export const projects: Project[] = [
             <div>
                 <SiteReference url="https://sommeilprofond.fr/" content="Sommeil Profond" /> is a blog to help people who wants to recover their energy better sleep.
                 It is develop with <b>SEO</b> (Search engine optimization).
+                <br />
+                <br />
+                I work on it since more than a year from time to time when there is work waiting to be done.
             </div>
             <ul>
                 <li>Develop and create features</li>
                 <li>Create animation</li>
                 <li>Project Advisor</li>
+                <li>Design page</li>
             </ul>
         </>),
-        technologies: ["Angular", "Sass", "Github", "SEO"],
+        technologies: ["Angular", "Sass", "Github", "SEO", "Figme"],
         imgSrc: Sleeping,
         author: (<>Photo by <a href="https://unsplash.com/@jakeacharles?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jake Charles</a> on <a href="https://unsplash.com/s/photos/sleep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
         </>),
@@ -123,6 +130,9 @@ export const projects: Project[] = [
             <div>
                 <SiteReference url="https://www.service-public.fr/" content="Service Public" /> is the French reference to inform and guide people to essential services and information.
                 It has a big Information System, it is managed by several teams in order to be maintain and deliver new features.
+                <br />
+                <br />
+                I spend around 2 years on this project and learned a lot of things about projects management.
             </div>
             <ul>
                 <li>Application management</li>
@@ -150,7 +160,7 @@ export const projects: Project[] = [
                 The data collected is then used for medical study and french people census.
                 <br />
                 <br />
-                Overall I helped maintain the project and made a plan to redesign the application by identifying the needs and restrictions of each decision makers.
+                I worked almost 1 year on it. Overall, I helped maintain the project and made a plan to redesign the application by identifying the needs and restrictions of each decision makers.
             </div>
             <ul>
                 <li>Functional analysis: Draft functional specifications</li>
